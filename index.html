@@ -208,6 +208,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -298,6 +308,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/Plug-in/" itemprop="url" rel="index">
+                    <span itemprop="name">Plug-in</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -324,31 +367,16 @@
       
         
           
-            <h1 id="jQuery-validate"><a href="#jQuery-validate" class="headerlink" title="jQuery-validate"></a>jQuery-validate</h1><p>validate是依赖于jQuery的一个表单验证插件, 最近做项目的时候刚好用到, 于是去官网查阅一番.<br>附上网址: <a href="https://github.com/DiegoLopesLima/Validate#readme" target="_blank" rel="external">https://github.com/DiegoLopesLima/Validate#readme</a> 下面是总结的属性和方法:</p>
-<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>在表单元素中添加指定的属性，来告诉插件需要如何进行验证</p>
-<h3 id="data-required"><a href="#data-required" class="headerlink" title="data-required"></a>data-required</h3><p>设置当前表单项为必填项！如果用户没有输入内容，则验证不通过</p>
-<h3 id="data-trim"><a href="#data-trim" class="headerlink" title="data-trim"></a>data-trim</h3><p>设置当前表单项在验证的时候，去掉左右两边的空格，然后进行验证传参</p>
-<h3 id="data-pattern"><a href="#data-pattern" class="headerlink" title="data-pattern"></a>data-pattern</h3><p>为当前表单项设置一个验证使用的正则表达式，如果该正则表达式验证通过则表单项验证通过！</p>
-<h3 id="data-conditional"><a href="#data-conditional" class="headerlink" title="data-conditional"></a>data-conditional</h3><p>为当前表单项设置一个条件，这个条件是一个函数，在验证的时候会调用这个函数，如果函数返回值为true，则验证通过，否则不通过</p>
-<h3 id="data-description"><a href="#data-description" class="headerlink" title="data-description"></a>data-description</h3><p>为当前表单项提供验证提示信息，和description对象配合使用</p>
-<h3 id="data-describedby"><a href="#data-describedby" class="headerlink" title="data-describedby"></a>data-describedby</h3><p>为提示信息指定显示位置！！！</p>
-<h2 id="validate方法的参数介绍"><a href="#validate方法的参数介绍" class="headerlink" title="validate方法的参数介绍"></a>validate方法的参数介绍</h2><h3 id="sendForm"><a href="#sendForm" class="headerlink" title="sendForm"></a>sendForm</h3><p>用来设置，表单验证通过之后，是否自动提交表单。默认是true。</p>
-<h3 id="回调函数！"><a href="#回调函数！" class="headerlink" title="回调函数！"></a>回调函数！</h3><ol>
-<li>valid  当表单内所有的表单元素都通过验证的时候，会调用该方法</li>
-<li>invalid 当表单内有任意元素不通过，那么整个表单验证就不通过，就会调用该方法</li>
-<li>eachField 当表单内任意一个元素进行验证的时候都会调用该方法！</li>
-<li>eachValidField 当任意表单元素通过校验的时候，就会调用该方法</li>
-<li>eachInvalideField 当任意表单元素不通过校验的时候，就会调用该方法</li>
-</ol>
-<h3 id="onKeyUp"><a href="#onKeyUp" class="headerlink" title="onKeyUp"></a>onKeyUp</h3><p>设置按键的时候，是否要进行验证   默认值false</p>
-<h3 id="onBlur"><a href="#onBlur" class="headerlink" title="onBlur"></a>onBlur</h3><p>设置失去焦点的时候，是否要进行验证   默认值false</p>
-<h3 id="onChange"><a href="#onChange" class="headerlink" title="onChange"></a>onChange</h3><p>设置内容改变的时候，是否要进行验证   默认值false</p>
-<h3 id="onSubmit"><a href="#onSubmit" class="headerlink" title="onSubmit"></a>onSubmit</h3><p>设置表单被提交的时候，是否要进行验证   默认值true</p>
-<h3 id="conditional"><a href="#conditional" class="headerlink" title="conditional"></a>conditional</h3><p>可以用来设置条件验证的条件,  这是一个对象，对象里面包含好很多方法。<br>当表单中有通过data-conditional来指定条件验证的函数的时候，插件会自动来这个对象中找对应名称的方法，进行调用，如果该方法的返回值为true则验证通过，否则验证不通过</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">conditional: &#123;</div><div class="line">	<span class="string">"isXX"</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> ...</div><div class="line">	&#125;,</div><div class="line">	<span class="string">"isXXx"</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> ...</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="description"><a href="#description" class="headerlink" title="description"></a>description</h3><p>这个参数中用来设置验证的提示信息，需要和data-description属性配合使用<br>data-description中指定的提示信息会在这个对象中进行查找！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">description: &#123;</div><div class="line">	<span class="comment">//下面的这个名字就是要在data-description中指定的名字</span></div><div class="line">	<span class="string">"名字"</span>: &#123;</div><div class="line">		<span class="attr">requeired</span>: <span class="string">""</span>,   <span class="comment">//在验证的时候，如果非空校验失败就会显示该内容</span></div><div class="line">		pattern:<span class="string">""</span>,		<span class="comment">//在验证的时候，如果格式校验失败就会显示该内容</span></div><div class="line">		conditional: <span class="string">""</span>, <span class="comment">//在验证的时候，如果条件校验失败就会显示该内容</span></div><div class="line">		valid: <span class="string">""</span>  <span class="comment">//在验证的时候，如果校验通过就会显示该内容</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-          
+          jQuery-validatevalidate是依赖于jQuery的一个表单验证插件, 最近做项目的时候刚好用到, 于是去官网查阅一番.附上网址: https://github.com/DiegoLopesLima/Validate#readme 下面是总结的属性和方法:
+属性在表单元素中添加指定的
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/04/03/validate插件使用心得/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -432,6 +460,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Technology</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Technology/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -458,42 +519,16 @@
       
         
           
-            <h1 id="杂序"><a href="#杂序" class="headerlink" title="杂序"></a>杂序</h1><p>这几天和同事讨论关于建博客的话题。我之前的博客是在博客园直接注册申请的，看他们有些是用Hexo配合Github搭建的。<br>心痒难耐，就去网上查了些资料，瞬间高大上的感觉有木有。以下是一些经验：</p>
-<h2 id="准备工作-环境"><a href="#准备工作-环境" class="headerlink" title="准备工作(环境)"></a>准备工作(环境)</h2><p>Hexo是基于Node.js的静态站点生成框架，所以要运行Hexo就必须安装Node环境。因为本人是通过Git版本工具上传到Github上的，所以也要安装Git的运行环境（Node和Git安装，过几天写出来）。<br>另外Hexo是使用 Markdown 编写文章的，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。</p>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><ol>
-<li><p>安装Hexo<br>在你的cmd控制台运行如下代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
-</li>
-<li><p>创建一个博客文件夹<br>为避免不必要的麻烦，路径最好是英文路径，在文件夹里面先右键单击GitBashHere，弹出Git运行窗口（以下所有命令操作都在Git窗口运行），然后执行hexo init。</p>
-</li>
-<li><p>测试<br>初始化完成后，在文件夹中直接执行 hexo s  在本地测试网页效果，在网页输入这个链接即可：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>正常的话会显示一个带有 Hello World 的文章，此时你的博客在本地就搭建好了</p>
-</li>
-</ol>
-<h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><p>hexo new “文章名称”<br>这句命令执行完毕之后，会在source/_posts中生成以文章名为文件名的markdown文件。<br>当然直接在这个文件夹里面新建md文件也可以</p>
-<h2 id="生成html"><a href="#生成html" class="headerlink" title="生成html"></a>生成html</h2><p>hexo g（这一步很关键）<br>执行这条命令之后，会在public目录下生成所有的静态页面，只要将该目录下所有的文件进行发布，发布到Github上，就可以通过Github的静态页面托管服务来访问页面了。</p>
-<h2 id="本地发表博客"><a href="#本地发表博客" class="headerlink" title="本地发表博客"></a>本地发表博客</h2><p>是不是每次都有些心得想留下点记录的时候，却因为在Github上传特麻烦而放弃呢？下面就是本地直接提交的技巧：</p>
-<ol>
-<li><p>安装 hexo-deployer-git</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置网站根目录下面的_config.yml<br>就是你的博客文件夹下面的_config.yml文件，配置最下面的deloy节点</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: github静态页面托管项目的地址</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>配置好了之后保存就好，博客基本信息的配置都在这个文件夹里面。</p>
-<ol>
-<li><p>提交到版本库<br>切换到public目录执行 git init 并进行一次提交</p>
-</li>
-<li><p>按照正常流程创建博客，编辑博客</p>
-</li>
-<li><p>执行hexo g</p>
-</li>
-<li><p>在 public 目录下去执行 hexo d</p>
-</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>对于不熟悉 Git 和 Hexo 基本操作的小伙伴，第一次建博可能比较麻烦。我前面几次安装hexo环境的时候，最后的两个文件等了好久才安装完。一定要等到窗口跳出：Admin@malong MINGW64 /d/myblog (master) 这一行才是执行完成，否者后续的操作就不能继续了。以上有执行过程任何问题，欢迎联系</p>
-
-          
+          杂序这几天和同事讨论关于建博客的话题。我之前的博客是在博客园直接注册申请的，看他们有些是用Hexo配合Github搭建的。心痒难耐，就去网上查了些资料，瞬间高大上的感觉有木有。以下是一些经验：
+准备工作(环境)Hexo是基于Node.js的静态站点生成框架，所以要运行Hexo就必须安装Node环境。
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2015/03/17/hexo个人博客搭建/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -578,15 +613,24 @@
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">2</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
